@@ -12,14 +12,14 @@
 	--bg-gradient: linear-gradient(180deg, var(--bg-primary) 0, transparent 100%);
 
 	/* text */
-	--text-primary: #1a1210;
-	--text-secondary: rgb(26 18 16 / 70%);
+	--text-primary: #101820;
+	--text-secondary: rgb(16 24 32 / 68%);
 	--text-inverse: #fff;
 
-	/* brand â€” the core palette, never swapped between themes */
-	--brand-primary: oklch(56% 0.2 25deg); /* refined red */
-	--brand-secondary: oklch(56% 0.2 45deg); /* warm ember */
-	--brand-accent: oklch(90% 0.05 25deg); /* soft rose */
+	/* brand — the core palette, never swapped between themes */
+	--brand-primary: oklch(32% 0.06 225deg); /* deep navy-teal */
+	--brand-secondary: oklch(58% 0.11 200deg); /* crisp teal */
+	--brand-accent: oklch(93% 0.03 200deg); /* pale mint */
 	--brand-gradient: linear-gradient(180deg, var(--brand-primary) 0, var(--brand-secondary) 100%);
 
 	/* semantic */
@@ -37,23 +37,25 @@
 	--link-hover: var(--brand-primary);
 
 	/* borders */
-	--border: rgb(26 18 16 / 12%);
-	--border-strong: rgb(26 18 16 / 24%);
+	--border: rgb(16 24 32 / 12%);
+	--border-strong: rgb(16 24 32 / 24%);
 
-	/* radius */
-	--border-radius-sm: 6px;
-	--border-radius-md: 12px;
-	--border-radius-lg: 20px;
+	/* radius — tight and rectilinear for a sharper, corporate feel;
+	   --border-radius-pill stays maxed since it's a shape category (chips,
+	   badges, avatars), not part of the roundedness scale */
+	--border-radius-sm: 2px;
+	--border-radius-md: 4px;
+	--border-radius-lg: 8px;
 	--border-radius-pill: 9999px;
 
-	/* shadows â€” soft elevation tiers, the only shadow mechanism in the app */
-	--shadow-sm: 0 1px 2px rgb(26 18 16 / 8%);
-	--shadow-md: 0 4px 10px rgb(26 18 16 / 12%);
-	--shadow-lg: 0 10px 24px rgb(26 18 16 / 16%);
+	/* shadows — soft elevation tiers, the only shadow mechanism in the app */
+	--shadow-sm: 0 1px 2px rgb(16 24 32 / 8%);
+	--shadow-md: 0 4px 10px rgb(16 24 32 / 12%);
+	--shadow-lg: 0 10px 24px rgb(16 24 32 / 16%);
 
-	/* typography â€” font stacks */
-	--heading-font-family: 'Baloo 2', system-ui, sans-serif;
-	--body-font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+	/* typography — font stacks */
+	--heading-font-family: 'Manrope', system-ui, sans-serif;
+	--body-font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
 	/* typography â€” sizes */
 	--hero-size: clamp(3.5rem, 7vw, 4.5rem);
@@ -99,23 +101,23 @@
 	}
 }
 
-/* DARK THEME â€” opt in per section with data-theme="dark" */
+/* DARK THEME — opt in per section with data-theme="dark" */
 [data-theme='dark'] {
-	/* backgrounds â€” warm near-black, sits with the red brand rather than a
-	   generic blue-black or gray */
-	--surface-a: #140f0e;
-	--surface-b: #1e1614;
+	/* backgrounds — cool near-black, sits with the navy-teal brand rather
+	   than a warm or neutral gray */
+	--surface-a: #0d1417;
+	--surface-b: #161f22;
 	--bg-primary: var(--surface-a);
 	--bg-secondary: var(--surface-b);
 
 	/* text */
-	--text-primary: #f7f2f0;
-	--text-secondary: rgb(247 242 240 / 62%);
-	--text-inverse: #140f0e;
+	--text-primary: #f2f6f6;
+	--text-secondary: rgb(242 246 246 / 62%);
+	--text-inverse: #0d1417;
 
-	/* brand â€” primary/accent stay identical to light mode, still sacred;
+	/* brand — primary/accent stay identical to light mode, still sacred;
 	   secondary brightens for contrast against the near-black background */
-	--brand-secondary: oklch(66% 0.19 45deg);
+	--brand-secondary: oklch(68% 0.11 200deg);
 
 	/* semantic â€” brightened for contrast against the dark background */
 	--success: #4ade80;
@@ -132,8 +134,8 @@
 	--link-hover: var(--brand-primary);
 
 	/* borders */
-	--border: rgb(255 250 248 / 12%);
-	--border-strong: rgb(247 242 240 / 24%);
+	--border: rgb(242 246 246 / 12%);
+	--border-strong: rgb(242 246 246 / 24%);
 
 	/* shadows */
 	--shadow-sm: 0 1px 2px rgb(0 0 0 / 30%);
@@ -215,9 +217,9 @@ body.is-admin .block-preview {
 	// (WorkCard's accent cards, ServiceCard's brand tone, .eyebrow,
 	// .btn.primary's gradient, etc.), which is exactly the "some blocks
 	// don't have theme colours" bug this caused.
-	--brand-primary: oklch(56% 0.2 25deg) !important;
-	--brand-secondary: oklch(56% 0.2 45deg) !important;
-	--brand-accent: oklch(90% 0.05 25deg) !important;
+	--brand-primary: oklch(32% 0.06 225deg) !important;
+	--brand-secondary: oklch(58% 0.11 200deg) !important;
+	--brand-accent: oklch(93% 0.03 200deg) !important;
 	--surface-a: #fafafa !important;
 	--surface-b: #fff !important;
 	--bg-primary: var(--surface-a) !important;
@@ -240,7 +242,7 @@ body.is-admin .block-preview {
 	--shadow-sm: 0 1px 2px rgb(15 18 34 / 8%) !important;
 	--shadow-md: 0 4px 10px rgb(15 18 34 / 12%) !important;
 	--shadow-lg: 0 10px 24px rgb(15 18 34 / 16%) !important;
-	--heading-font-family: 'Baloo 2', system-ui, sans-serif !important;
+	--heading-font-family: 'Manrope', system-ui, sans-serif !important;
 	--heading-font-weight: 700 !important;
 }
 
@@ -257,7 +259,7 @@ body.is-admin .block-preview [data-theme='dark'] {
 	// primary/accent don't shift between themes so they're inherited from
 	// the light .block-preview reset above; this was previously a stray
 	// cyan (#22d3ee) left over from an older palette.
-	--brand-secondary: oklch(66% 0.19 45deg) !important;
+	--brand-secondary: oklch(68% 0.11 200deg) !important;
 	--success: #4ade80 !important;
 	--success-bg: rgb(74 222 128 / 15%) !important;
 	--error: #f87171 !important;
